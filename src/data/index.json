@@ -1,0 +1,45 @@
+{
+  "portfolio": [
+    {
+      "id": "1",
+      "src": "./img/product-chain-1.png",
+      "title": "To do List",
+      "description": "To do List application designed to help users track and manage their tasks and to-dos.",
+      "link": "https://github.com/ChienHuang0818/MyTodoList"
+    },
+    {
+      "id": "2",
+      "src": "./img/tictatoe.png",
+      "title": "App Dashboard",
+      "description": "The React Native project is a \"Tic Tac Toe\" game designed to let users easily enjoy the classic game of Tic Tac Toe on their mobile devices",
+      "link": "hhttps://github.com/ChienHuang0818/TicTaToe"
+    },
+    {
+      "id": "3",
+      "src": "./img/placeholder-image-2.png",
+      "title": "Easy Rentn",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique",
+      "link": "View In Github"
+    }
+  ],
+  "certifications": [
+    {
+      "title": "Certified JavaScript Developer",
+      "issuer": "JavaScript Institute",
+      "image": "./img/placeholder-image-1.png",
+      "link": "https://www.javascriptinstitute.org/certification/"
+    },
+    {
+      "title": "React Professional Certification",
+      "issuer": "React Association",
+      "image": "./img/certifications/react-certification.png",
+      "link": "https://www.react.org/certification/"
+    },
+    {
+      "title": "Full Stack Developer Certificate",
+      "issuer": "Code Academy",
+      "image": "./img/certifications/fullstack-certification.png",
+      "link": "https://www.codeacademy.com/certification/"
+    }
+  ]
+}

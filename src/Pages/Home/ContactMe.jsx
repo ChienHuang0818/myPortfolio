@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaGit, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import '../../App.css'; 
 
 function ContactMe() {
@@ -11,15 +11,12 @@ function ContactMe() {
           If you have any inquiries or would like to collaborate, feel free to reach out.
         </p>
         <div className="social-links">
-          {/* Instagram 图标 */}
-          <a href="https://www.instagram.com/yourusername" target="_blank" rel="noreferrer" className="social-icon">
-            <FaInstagram size={30} />
+          <a href="https://github.com/ChienHuang0818" target="_blank" rel="noreferrer" className="social-icon">
+            <FaGit size={30} />
           </a>
-          {/* LinkedIn 图标 */}
-          <a href="https://www.linkedin.com/in/yourusername" target="_blank" rel="noreferrer" className="social-icon">
+          <a href="linkedin.com/in/chien-huang-sarah" target="_blank" rel="noreferrer" className="social-icon">
             <FaLinkedin size={30} />
           </a>
-          {/* Gmail 圖示 */}
           <a href="mailto:betty556611@gmail.com" target="_blank" rel="noreferrer" className="social-icon">
             <svg
               xmlns="http://www.w3.org/2000/svg"

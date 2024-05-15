@@ -5,7 +5,7 @@ const CV = () => {
   return (
     <div className="cv-container">
       <iframe 
-        src="/img/cv.pdf"  // 確保路徑正確
+        src="/img/cv.pdf"  
         title="CV"
         className="cv-iframe"
         style={{ width: '100%', height: '100vh', border: 'none' }}
@@ -15,6 +15,3 @@ const CV = () => {
 };
 
 export default CV;
-
-
-

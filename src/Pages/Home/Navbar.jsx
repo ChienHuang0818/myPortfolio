@@ -91,7 +91,7 @@ function Navbar() {
           </li>
           <li>
             <NavLink
-              to="/CV"
+              to="/cv"
               className="navbar--content"
               onClick={closeMenu}
             >

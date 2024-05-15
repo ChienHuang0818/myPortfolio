@@ -3,21 +3,21 @@
     {
       "id": "1",
       "src": "./img/product-chain-1.png",
-      "title": "To do List",
+      "title": "To Do List",
       "description": "To do List application designed to help users track and manage their tasks and to-dos.",
       "link": "https://github.com/ChienHuang0818/MyTodoList"
     },
     {
       "id": "2",
       "src": "./img/tictatoe.png",
-      "title": "App Dashboard",
+      "title": "Tictatoe Game",
       "description": "The React Native project is a \"Tic Tac Toe\" game designed to let users easily enjoy the classic game of Tic Tac Toe on their mobile devices",
       "link": "https://github.com/ChienHuang0818/TicTaToe"
     },
     {
       "id": "3",
       "src": "./img/fakeStore.png",
-      "title": "Shopping cart application",
+      "title": "Shopping Cart Application",
       "description": "Develop a Shopping Application using React Native",
       "link": "https://github.com/ChienHuang0818/FakeStore-"
     }

@@ -1,25 +1,26 @@
 import React from 'react';
-import { FaInstagram, FaLinkedin } from 'react-icons/fa'; // 引入社交媒体图标
+import { FaInstagram, FaLinkedin } from 'react-icons/fa';
+import '../../App.css'; 
 
 function ContactMe() {
   return (
     <section id="Contact" className="contact--section">
       <div>
-        <h2>Contact Me</h2>
-        <p className="text-lg">
-        If you have any inquiries or would like to collaborate, feel free to reach out.
+        <h2 className="contact--title">Contact Me</h2>
+        <p className="contact--text">
+          If you have any inquiries or would like to collaborate, feel free to reach out.
         </p>
         <div className="social-links">
           {/* Instagram 图标 */}
-          <a href="https://www.instagram.com/yourusername" target="_blank" rel="noreferrer">
-            <FaInstagram size={30} style={{ marginRight: '10px' }} />
+          <a href="https://www.instagram.com/yourusername" target="_blank" rel="noreferrer" className="social-icon">
+            <FaInstagram size={30} />
           </a>
           {/* LinkedIn 图标 */}
-          <a href="https://www.linkedin.com/in/yourusername" target="_blank" rel="noreferrer">
-            <FaLinkedin size={30} style={{ marginRight: '10px' }} />
+          <a href="https://www.linkedin.com/in/yourusername" target="_blank" rel="noreferrer" className="social-icon">
+            <FaLinkedin size={30} />
           </a>
           {/* Gmail 圖示 */}
-          <a href="mailto:betty556611@gmail.com" target="_blank" rel="noreferrer">
+          <a href="mailto:betty556611@gmail.com" target="_blank" rel="noreferrer" className="social-icon">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="30"
@@ -41,4 +42,3 @@ function ContactMe() {
 }
 
 export default ContactMe;
-

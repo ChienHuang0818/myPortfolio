@@ -12,14 +12,14 @@
       "src": "./img/tictatoe.png",
       "title": "App Dashboard",
       "description": "The React Native project is a \"Tic Tac Toe\" game designed to let users easily enjoy the classic game of Tic Tac Toe on their mobile devices",
-      "link": "hhttps://github.com/ChienHuang0818/TicTaToe"
+      "link": "https://github.com/ChienHuang0818/TicTaToe"
     },
     {
       "id": "3",
-      "src": "./img/placeholder-image-2.png",
-      "title": "Easy Rentn",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique",
-      "link": "View In Github"
+      "src": "./img/fakeStore.png",
+      "title": "Shopping cart application",
+      "description": "Develop a Shopping Application using React Native",
+      "link": "https://github.com/ChienHuang0818/FakeStore-"
     }
   ],
   "certifications": [

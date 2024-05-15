@@ -1,14 +1,13 @@
-import data from "../../data/index.json";
 import { FaJsSquare, FaReact, FaNodeJs, FaPython, FaSwift } from 'react-icons/fa';
 
 export default function MySkills() {
   const mySkills = [
     { 
       title: "JavaScript", 
-      description: "Expert in leveraging JavaScript for complex front-end and server-side applications.", 
+      description: "Proficient in JavaScript syntax and using the React library to build web pages.", 
       icon: <FaJsSquare />,
       skills: [
-        "Building dynamic SPAs (Single Page Applications)",
+        "Building dynamic Single Page Applications (SPAs)",
         "RESTful API development and integration",
         "Asynchronous programming with Promises and Async/Await",
         "ES6+ syntax and modern JavaScript frameworks"
@@ -16,7 +15,7 @@ export default function MySkills() {
     },
     { 
       title: "React.js", 
-      description: "Skilled in React.js for creating highly responsive and dynamic user interfaces.",
+      description: "Experienced with the React library for creating highly responsive and dynamic user interfaces.",
       icon: <FaReact />,
       skills: [
         "Component-based architecture using JSX",
@@ -26,36 +25,23 @@ export default function MySkills() {
       ]
     },
     { 
-      title: "Node.js", 
-      description: "Proficient in using Node.js to develop scalable and efficient server-side solutions.", 
-      icon: <FaNodeJs />,
-      skills: [
-        "Express.js for server setup",
-        "Handling databases with MongoDB and Mongoose",
-        "Creating RESTful services",
-        "Implementing security with JWT and OAuth"
-      ]
-    },
-    { 
-      title: "Python", 
-      description: "Advanced skills in Python for sophisticated data analysis and backend development.", 
-      icon: <FaPython />,
-      skills: [
-        "Data analysis with Pandas and NumPy",
-        "Web scraping with Beautiful Soup and Scrapy",
-        "Developing web applications with Django and Flask",
-        "Automating tasks and scripting"
-      ]
-    },
-    { 
       title: "Swift", 
-      description: "Experienced in Swift for innovative iOS application development.", 
+      description: "Created a To-Do List project using Swift and understand how to utilize it.",
       icon: <FaSwift />,
       skills: [
         "Building user-friendly interfaces with UIKit",
         "Integrating APIs and cloud services",
         "Core Data for local data storage",
         "Utilizing Swift's concurrency features"
+      ]
+    },
+    { 
+      title: "Python", 
+      description: "Developed web projects using Python and the Flask framework.",
+      icon: <FaPython />,
+      skills: [
+        "Data analysis with Pandas and NumPy",
+        "Developing web applications with Django and Flask",
       ]
     }
   ];
@@ -85,6 +71,3 @@ export default function MySkills() {
     </section>
   );
 }
-
-
-

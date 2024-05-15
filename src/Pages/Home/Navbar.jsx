@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-scroll";
+import { NavLink } from "react-router-dom";
 import '../../App.css'; 
 
 function Navbar() {
@@ -22,8 +22,7 @@ function Navbar() {
 
     window.addEventListener("resize", handleResize);
 
-    // 初始化設置
-    handleResize();
+    handleResize(); // 初始化設置
 
     return () => {
       window.removeEventListener("resize", handleResize);
@@ -33,7 +32,7 @@ function Navbar() {
   return (
     <nav className={`navbar ${navActive ? "active" : ""}`}>
       <div>
-        <img src="./img/sarah.png" alt="ChienHuang" width="150px" height="120px" />
+        <img src="/img/sarah.png" alt="ChienHuang" width="150px" height="120px" />
       </div>
       <div
         className={`nav__hamburger ${navActive ? "active" : ""}`}
@@ -46,86 +45,59 @@ function Navbar() {
       <div className={`navbar--items ${navActive ? "active" : ""}`}>
         <ul>
           <li>
-            <Link
-              onClick={closeMenu}
-              activeClass="navbar--active-content"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              to="heroSection"
+            <NavLink
+              to="/"
               className="navbar--content"
+              onClick={closeMenu}
             >
               Home
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
-              onClick={closeMenu}
-              activeClass="navbar--active-content"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              to="AboutMe"
+            <NavLink
+              to="/about-me"
               className="navbar--content"
+              onClick={closeMenu}
             >
               About Me
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
-              onClick={closeMenu}
-              activeClass="navbar--active-content"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              to="mySkills"
+            <NavLink
+              to="/my-skills"
               className="navbar--content"
+              onClick={closeMenu}
             >
               My Skills
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
-              onClick={closeMenu}
-              activeClass="navbar--active-content"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              to="MyPortfolio"
+            <NavLink
+              to="/my-portfolio"
               className="navbar--content"
+              onClick={closeMenu}
             >
               Portfolio
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
-              onClick={closeMenu}
-              activeClass="navbar--active-content"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              to="Contact"
+            <NavLink
+              to="/contact"
               className="navbar--content contact-section"
+              onClick={closeMenu}
             >
               Contact Me
-            </Link>
-            </li>
-            <li>
-              <a
-                href="./img/CV.png"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="navbar--content"
-                onClick={closeMenu}
-              >
-                CV
-              </a>
-            </li>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/cv"
+              className="navbar--content"
+              onClick={closeMenu}
+            >
+              CV
+            </NavLink>
+          </li>
         </ul>
       </div>
     </nav>

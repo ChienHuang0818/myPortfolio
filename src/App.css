@@ -8,6 +8,7 @@ body {
   -webkit-font-smoothing: "Roboto", sans-serif;
   -moz-osx-font-smoothing: "Roboto", sans-serif;
   font-style: normal;
+  padding-top: 80px; 
 }
 h1,
 h2,
@@ -21,7 +22,7 @@ p {
 :root {
   --primary: #e17295;
   --heading-color: #282938;
-  --bg-shade: #f5fcff;
+  --bg-shade: #f1e2e6;
   --github: #e17295;
   --darkblue:#000000;
   --black: #000000;
@@ -434,7 +435,7 @@ h2 {
   line-height: 150%;
 }
 /* Testimonial Ends */
-/* Testimonial Ends */
+
 .contact--section {
   display: flex;
   padding: 150px 85px;
@@ -452,30 +453,31 @@ h2 {
 }
 
 .contact--text {
-  color: #666; /* 文字顏色 */
+  color: #382e2e; /* 文字顏色 */
   font-size: 1.2em; /* 文字字體大小 */
   margin-bottom: 20px;
+  font-weight: bold;
 }
 
 .social-links {
   display: flex;
   justify-content: center; /* 居中對齊 */
-  gap: 15px; /* 圖標之間的間距 */
+  gap: 50px; /* 圖標之間的間距 */
 }
 
 .social-icon {
-  color: #333; /* 圖標顏色 */
-  font-size: 1.5em; /* 圖標大小 */
-  transition: color 0.3s; /* 過渡效果 */
+  color: #333; 
+  font-size: 1.5em; 
+  transition: color 0.3s; 
 }
 
 .social-icon:hover {
-  color: #d38cb3; /* 懸停時的顏色 */
+  color: #d38cb3; 
 }
 
 .social-icon svg {
-  width: 3em; /* 圖標寬度 */
-  height: 1.5em; /* 圖標高度 */
+  width: 3em; 
+  height: 1.5em; 
 }
 
 
@@ -511,6 +513,8 @@ h2 {
   background: var(--white);
 }
 
+
+
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -543,7 +547,6 @@ input[type="checkbox"] {
 /* Contact End */
 
 /* Footer Start */
-/* Footer Starts */
 .footer--container {
   display: flex;
   padding: 106.667px 85.333px;
@@ -633,7 +636,7 @@ input[type="checkbox"] {
   }
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1000px) {
   .btn-outline-primary {
     display: none;
   }
@@ -645,7 +648,7 @@ input[type="checkbox"] {
   .hero--section--title,
   .hero--section-description,
   .footer--content {
-    text-align: center;
+    text-align: left;
   }
   .skills--section--container,
   .about--section,
@@ -671,7 +674,7 @@ input[type="checkbox"] {
   .contact--section,
   .footer--container {
     gap: 20px;
-    padding-top: 70px;
+    padding-top: 180px;
     padding-bottom: 70px;
   }
   .about--section {
@@ -780,6 +783,14 @@ input[type="checkbox"] {
 
   .nav__hamburger.active .nav__hamburger__line:nth-child(3) {
     transform: rotate(-45deg) translate(0.45rem, -0.1875rem);
+  }
+  .about--section {
+    padding: 70px 20px; 
+    gap: 20px; 
+  }
+  .about--section--img,
+  .about--section--content {
+    flex: 1 1 45%; /* 調整元素的寬度，使其在較小屏幕上仍然佔據一行 */
   }
 }
 

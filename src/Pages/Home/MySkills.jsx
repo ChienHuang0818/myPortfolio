@@ -49,7 +49,6 @@ export default function MySkills() {
   return (
     <section className="skills--section" id="mySkills">
       <div className="portfolio--container">
-        <p className="section--title">Professional Skills</p>
         <h2 className="skills--section--heading">Technical Proficiencies</h2>
       </div>
       <div className="skills--section--container">

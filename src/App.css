@@ -117,7 +117,7 @@ h2 {
 /* Body 2 */
 .text-md {
   color: var(--darkblue);
-  font-size: 16px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
@@ -163,16 +163,29 @@ h2 {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 1000; 
 }
-.navbar--items > ul {
-  list-style: none;
+.navbar--items {
   display: flex;
-  align-items: flex-start;
-  gap: 42.667px;
-  text-decoration: none;
+  justify-content: flex-start; /* 使子項目對齊靠左 */
+  align-items: center; /* 垂直居中對齊 */
 }
+
+.navbar--items ul {
+  list-style: none; /* 移除列表項目的默認樣式 */
+  display: flex; /* 使用Flexbox佈局 */
+  padding: 0; /* 移除內邊距 */
+  margin: 0; /* 移除外邊距 */
+}
+
+.navbar--items ul > li {
+  margin-right: 20px; 
+}
+
 .navbar--items ul > li > a {
-  text-decoration: none;
+  text-decoration: none; 
+  color: var(--darkblue); 
+  padding: 10px; 
 }
 /* Navbar Content */
 .navbar--content {
@@ -195,7 +208,6 @@ h2 {
   justify-content: space-between;
   padding: 133.333px 85.333px;
   gap: 32px;
-  background-color: var(--bg-shade);
 }
 .hero--section--content-box {
   display: flex;
@@ -310,11 +322,15 @@ h2 {
 
 /* About Us */
 .about--section {
-  display: grid;
+  display: flex;
+  flex-direction: row;
   padding: 133.3px 85.3px;
   align-items: center;
   gap: 114.6px;
-  grid-template-columns: repeat(2, 1fr);
+
+}
+.about--section--img {
+  display:flex;
 }
 .about--section--img > img {
   width: 100%;
@@ -679,7 +695,6 @@ input[type="checkbox"] {
   }
   .about--section {
     gap: 20px;
-    padding-top: 0;
     padding-bottom: 0;
   }
   .testimonial--section--card {
@@ -734,7 +749,7 @@ input[type="checkbox"] {
   transition: all ease-in-out 0.2s;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 800px) {
   .nav__hamburger {
     display: flex;
     z-index: 200;
@@ -745,7 +760,7 @@ input[type="checkbox"] {
     display: none; /* 默認隱藏 */
     align-items: center;
     justify-content: center;
-    background-color: rgba(255, 255, 255);
+    background-color: rgb(237, 212, 212);
     top: -20rem;
     left: 0;
     width: 100%;
@@ -770,6 +785,7 @@ input[type="checkbox"] {
 
   .navbar--items.active {
     display: flex;
+    line-height: 50px;
     top: 30px;
   }
 
@@ -783,14 +799,6 @@ input[type="checkbox"] {
 
   .nav__hamburger.active .nav__hamburger__line:nth-child(3) {
     transform: rotate(-45deg) translate(0.45rem, -0.1875rem);
-  }
-  .about--section {
-    padding: 70px 20px; 
-    gap: 20px; 
-  }
-  .about--section--img,
-  .about--section--content {
-    flex: 1 1 45%; /* 調整元素的寬度，使其在較小屏幕上仍然佔據一行 */
   }
 }
 

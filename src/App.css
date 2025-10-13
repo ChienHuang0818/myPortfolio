@@ -1,14 +1,13 @@
 /* Global CSS */
-
-
-
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: "Roboto", sans-serif;
   -moz-osx-font-smoothing: "Roboto", sans-serif;
   font-style: normal;
-  padding-top: 80px; 
+  padding-top: 80px;
+  background-color: #000000;
+  color: #ffffff;
 }
 h1,
 h2,
@@ -21,10 +20,10 @@ p {
 }
 :root {
   --primary: #e17295;
-  --heading-color: #282938;
-  --bg-shade: #f1e2e6;
+  --heading-color: #ffffff;
+  --bg-shade: #1a1a1a;
   --github: #e17295;
-  --darkblue:#000000;
+  --darkblue: #ffffff;
   --black: #000000;
   --white: #ffffff;
 }
@@ -157,35 +156,76 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: var(--white);
-  box-shadow: 0px 5.333px 80px 0 rgba(0, 0, 0, 0.1);
+  background: #1a1a1a;
+  box-shadow: 0px 5.333px 80px 0 rgba(255, 255, 255, 0.1);
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000; 
+  z-index: 1000;
+  height: 80px;
+  padding: 0 20px;
 }
+.navbar--logo {
+  margin-left: 40px;
+}
+
+.navbar--logo a {
+  text-decoration: none;
+  display: block;
+}
+
+.navbar--logo img {
+  border-radius: 50%;
+  border: 1px solid var(--primary);
+  box-shadow: 0 4px 8px rgba(225, 114, 149, 0.3);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.navbar--logo img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(225, 114, 149, 0.5);
+}
+
 .navbar--items {
   display: flex;
-  justify-content: flex-start; /* 使子項目對齊靠左 */
-  align-items: center; /* 垂直居中對齊 */
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .navbar--items ul {
-  list-style: none; /* 移除列表項目的默認樣式 */
-  display: flex; /* 使用Flexbox佈局 */
-  padding: 0; /* 移除內邊距 */
-  margin: 0; /* 移除外邊距 */
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
 }
 
 .navbar--items ul > li {
-  margin-right: 20px; 
+  margin-right: 20px;
 }
 
-.navbar--items ul > li > a {
-  text-decoration: none; 
-  color: var(--darkblue); 
-  padding: 10px; 
+.navbar--items ul > li > a,
+.navbar--items ul > li > button {
+  text-decoration: none;
+  color: var(--darkblue);
+  padding: 10px;
+  transition: color 0.3s ease; /* 添加過渡效果 */
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.navbar--items ul > li > a:hover,
+.navbar--items ul > li > button:hover {
+  color: var(--primary);
+}
+
+.navbar--button {
+  width: 100%;
+  text-align: left;
 }
 /* Navbar Content */
 .navbar--content {
@@ -207,13 +247,12 @@ h2 {
   align-items: center;
   justify-content: space-between;
   padding: 133.333px 85.333px;
-  gap: 32px;
+  background-color: #000000;
 }
 .hero--section--content-box {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 32px;
 }
 .hero--section--content {
   display: flex;
@@ -257,6 +296,7 @@ h2 {
   justify-content: center;
   align-items: flex-start;
   gap: 106.667px;
+  background-color: #1a1a1a;
 }
 .skills--section--heading {
   color: var(--heading-color);
@@ -279,7 +319,7 @@ h2 {
   gap: 32px;
   flex: 1 0 0;
   border-radius: 10.6px;
-  background: var(--bg-shade);
+  background: #2a2a2a;
   min-height: 250px;
 }
 .skills--section--card:hover {
@@ -327,10 +367,10 @@ h2 {
   padding: 133.3px 85.3px;
   align-items: center;
   gap: 114.6px;
-
+  background-color: #000000;
 }
 .about--section--img {
-  display:flex;
+  display: flex;
 }
 .about--section--img > img {
   width: 100%;
@@ -345,6 +385,7 @@ h2 {
   flex-direction: column;
   align-items: flex-start;
   gap: 80px;
+  background-color: #1a1a1a;
 }
 .portfolio--container-box {
   display: flex;
@@ -460,16 +501,17 @@ h2 {
   align-items: center;
   text-align: center;
   gap: 64px;
+  background-color: #000000;
 }
 
 .contact--title {
-  color: #333; /* 標題顏色 */
+  color: #ffffff; /* 標題顏色 */
   font-size: 2em; /* 標題字體大小 */
   margin-bottom: 10px;
 }
 
 .contact--text {
-  color: #382e2e; /* 文字顏色 */
+  color: #ffffff; /* 文字顏色 */
   font-size: 1.2em; /* 文字字體大小 */
   margin-bottom: 20px;
   font-weight: bold;
@@ -482,20 +524,19 @@ h2 {
 }
 
 .social-icon {
-  color: #333; 
-  font-size: 1.5em; 
-  transition: color 0.3s; 
+  color: #333;
+  font-size: 1.5em;
+  transition: color 0.3s;
 }
 
 .social-icon:hover {
-  color: #d38cb3; 
+  color: #d38cb3;
 }
 
 .social-icon svg {
-  width: 3em; 
-  height: 1.5em; 
+  width: 3em;
+  height: 1.5em;
 }
-
 
 .contact--form--container {
   display: grid;
@@ -528,8 +569,6 @@ h2 {
   border: 1.333px solid var(--primary);
   background: var(--white);
 }
-
-
 
 select {
   -webkit-appearance: none;
@@ -736,7 +775,7 @@ input[type="checkbox"] {
   flex-direction: column;
   justify-content: space-around;
   position: absolute;
-  top:60px;
+  top: 60px;
   right: 25px;
 }
 
@@ -801,6 +840,5 @@ input[type="checkbox"] {
     transform: rotate(-45deg) translate(0.45rem, -0.1875rem);
   }
 }
-
 
 /* Responsive Screens Ends*/

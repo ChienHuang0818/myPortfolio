@@ -1,22 +1,50 @@
 export default function AboutMe() {
   return (
     <section id="AboutMe" className="about--section">
-      <div className="hero--section--content--box about--section--box">
-        <div className="hero--section--content">
-          <h1 className="skills-section--heading">About Me</h1>
-          <p className="hero--section-description">
-          With a Master’s degree from Griffith University and extensive experience in web technologies, I am a seasoned developer skilled in navigating complex project requirements and leading digital transformation initiatives.
-          </p>
-          <p className="hero--section-description">
-            I thrive on innovation and efficiency, continually seeking to enhance my technical skills and contribute to the advancement of the technology sector.
-          </p>
-        <div className="about--section--img">
-          <img src="./img/about-me.png" alt="About Me" />
+      <div className="about--content--wrapper">
+        <div className="about--text--content">
+          <h1 className="about--title">About Me</h1>
+
+          {/* Intro / identity */}
+          <div className="about--description">
+            <p className="about--paragraph">
+              I'm a Master's graduate from Griffith University (Information Technology), now
+              focusing on full‑stack development. I learn fast, communicate clearly, and stay calm
+              under pressure—delivering reliable results when timelines are tight.
+            </p>
+
+            <p className="about--paragraph">
+              My toolkit centers on React, TypeScript, and C#, and I've completed two internships
+              plus several side projects where I shipped real features, collaborated in Agile teams,
+              and improved user experience with thoughtful UI.
+            </p>
+
+            {/* Personality / strengths as bullet points */}
+            <div className="about--personality">
+              <h3 className="personality--title">Key Strengths:</h3>
+              <ul className="personality--list">
+                <li>Fast Learner</li>
+                <li>Calm Under Pressure</li>
+                <li>Team‑oriented Communicator</li>
+                <li>Problem‑solver</li>
+                <li>Ownership Mindset</li>
+              </ul>
+            </div>
+          </div>
         </div>
+
+        {/* Part 2: Graduation photos with fade-in effect */}
+        <div className="about--photos">
+          <div className="graduation--photos">
+            <figure className="graduation--photo graduation--photo--1">
+              <img src="./img/graduation1.jpg" alt="Graduation ceremony" />
+            </figure>
+            <figure className="graduation--photo graduation--photo--2">
+              <img src="./img/graduation2.jpg" alt="Graduation celebration" />
+            </figure>
+          </div>
         </div>
       </div>
     </section>
   );
 }
-
-

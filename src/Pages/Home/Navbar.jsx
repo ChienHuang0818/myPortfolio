@@ -54,8 +54,8 @@ function Navbar() {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/my-skills" className="navbar--content" onClick={closeMenu}>
-              My Skills
+            <NavLink to="/work" className="navbar--content" onClick={closeMenu}>
+              Experience
             </NavLink>
           </li>
           <li>

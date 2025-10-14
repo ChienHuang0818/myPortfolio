@@ -3,15 +3,14 @@ import ContactMe from "../ContactMe";
 import Footer from "../Footer";
 import HeroSection from "../HeroSection";
 import MyPortfolio from "../MyPortfolio";
-import MySkills from "../MySkills";
-import Testimonial from "../Testimonials";
+import Work from "../Work";
 
 export default function Home() {
   return (
     <>
       <HeroSection />
       <AboutMe />
-      <MySkills/>
+      <Work />
       <MyPortfolio />
       <ContactMe />
       <Footer />

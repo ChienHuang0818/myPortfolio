@@ -1,45 +1,44 @@
 {
   "portfolio": [
     {
-      "id": "1",
-      "src": "./img/product-chain-1.png",
-      "title": "To Do List",
-      "description": "To do List application designed to help users track and manage their tasks and to-dos.",
-      "link": "https://github.com/ChienHuang0818/MyTodoList"
+      "title": "Amount2Words",
+      "description": "A web application built with ASP.NET MVC that converts numeric amounts into English currency words. Includes a full test suite and documentation.",
+      "src": "./img/project1.png",
+      "tech": ["C#", ".NET", "ASP.NET MVC", "XUnit"],
+      "links": {
+        "demo": "https://amount2words.onrender.com/Convert",
+        "code": "https://github.com/ChienHuang0818/Amount2Words"
+      }
     },
     {
-      "id": "2",
-      "src": "./img/tictatoe.png",
-      "title": "Tictatoe Game",
-      "description": "The React Native project is a \"Tic Tac Toe\" game designed to let users easily enjoy the classic game of Tic Tac Toe on their mobile devices",
-      "link": "https://github.com/ChienHuang0818/TicTaToe"
+      "title": "FinShark API",
+      "description": "A financial data API providing stock and market index information, featuring caching, pagination, and RESTful design.",
+      "src": "./img/project2.png",
+      "tech": ["C#", ".NET", "Web API", "MSSQL", "EF Core"],
+      "links": {
+        "demo": "https://your-demo-url",
+        "code": "https://github.com/ChienHuang0818/FinShark"
+      }
     },
     {
-      "id": "3",
-      "src": "./img/fakeStore.png",
-      "title": "Shopping Cart Application",
-      "description": "Develop a Shopping Application using React Native",
-      "link": "https://github.com/ChienHuang0818/FakeStore-"
-    }
-  ],
-  "certifications": [
-    {
-      "title": "Certified JavaScript Developer",
-      "issuer": "JavaScript Institute",
-      "image": "./img/placeholder-image-1.png",
-      "link": "https://www.javascriptinstitute.org/certification/"
+      "title": "Photo Gallery",
+      "description": "A responsive image gallery that integrates with the Unsplash API to search and display photos with lazy loading and error handling.",
+      "src": "./img/project4.png",
+      "tech": ["React", "TypeScript", "Redux", "Unsplash API"],
+      "links": {
+        "demo": "https://photo-gallery-n965e1hzn-chienhuang0818s-projects.vercel.app/",
+        "code": "https://github.com/ChienHuang0818/photo-gallery"
+      }
     },
     {
-      "title": "React Professional Certification",
-      "issuer": "React Association",
-      "image": "./img/certifications/react-certification.png",
-      "link": "https://www.react.org/certification/"
-    },
-    {
-      "title": "Full Stack Developer Certificate",
-      "issuer": "Code Academy",
-      "image": "./img/certifications/fullstack-certification.png",
-      "link": "https://www.codeacademy.com/certification/"
+      "title": "Instagram UI Clone",
+      "description": "A responsive Instagram-style web interface built with Chakra UI, featuring profile view, post grid, and navigation components.",
+      "src": "./img/project5.png",
+      "tech": ["React", "Chakra UI", "JavaScript", "CSS"],
+      "links": {
+        "demo": "https://instagram-project-silk.vercel.app/auth",
+        "code": "https://github.com/ChienHuang0818/instagram-clone"
+      }
     }
   ]
 }

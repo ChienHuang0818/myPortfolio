@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Github, Linkedin, Mail, Copy, Check } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 function TypingText({ text, speed = 100, className = "" }) {
   const [displayed, setDisplayed] = useState("");
@@ -89,16 +89,11 @@ export default function HeroSection() {
             rel="noreferrer"
             className="hero--link"
           >
-            <Linkedin className="icon" /> LinkedIn
+            <Mail className="icon" /> LinkedIn
           </a>
-          <button
-            onClick={copyEmailToClipboard}
-            className="hero--link contact"
-            title="Click to copy email address"
-          >
-            {emailCopied ? <Check className="icon" /> : <Mail className="icon" />}
-            {emailCopied ? "Email Copied!" : "Contact Me"}
-          </button>
+          <a href="/contact" target="_blank" rel="noreferrer" className="hero--link">
+            <Mail className="icon" /> Contact Me
+          </a>
         </div>
       </div>
 

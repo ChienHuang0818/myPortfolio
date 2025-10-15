@@ -1,15 +1,21 @@
 import React, { useState } from "react";
-import { FaGit, FaInstagram, FaLinkedin, FaEnvelope, FaCheck } from "react-icons/fa";
+import { FaEnvelope, FaCheck, FaSpinner, FaPaperPlane } from "react-icons/fa";
+import emailjs from "@emailjs/browser";
 import "../../App.css";
 
 function ContactMe() {
+  const EMAILJS_SERVICE_ID = "service_qwm3p29";
+  const EMAILJS_TEMPLATE_ID = "template_nu6pem8";
+  const EMAILJS_PUBLIC_KEY = "5rJbA13vU7HMOhnaN";
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
     message: "",
   });
-  const [emailCopied, setEmailCopied] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null); // 'success', 'error', null
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -19,49 +25,46 @@ function ContactMe() {
     }));
   };
 
-  const copyEmailToClipboard = async () => {
-    try {
-      await navigator.clipboard.writeText("betty556611@gmail.com");
-      setEmailCopied(true);
-      setTimeout(() => setEmailCopied(false), 2000);
-    } catch (err) {
-      console.error("Failed to copy email: ", err);
-      const textArea = document.createElement("textarea");
-      textArea.value = "betty556611@gmail.com";
-      document.body.appendChild(textArea);
-      textArea.select();
-      document.execCommand("copy");
-      document.body.removeChild(textArea);
-      setEmailCopied(true);
-      setTimeout(() => setEmailCopied(false), 2000);
-    }
-  };
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
 
-    // 創建 mailto 連結
-    const subject = encodeURIComponent(formData.subject || "Portfolio Contact");
-    const body = encodeURIComponent(`
-Name: ${formData.name}
-Email: ${formData.email}
+    try {
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+        to_email: "chienhuang0818@gmail.com",
+      };
 
-Message:
-${formData.message}
-    `);
+      const response = await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams,
+        EMAILJS_PUBLIC_KEY
+      );
 
-    const mailtoLink = `mailto:betty556611@gmail.com?subject=${subject}&body=${body}`;
+      console.log("Email sent successfully!", response.status, response.text);
+      setSubmitStatus("success");
 
-    // 嘗試打開郵件客戶端
-    window.location.href = mailtoLink;
-
-    // 重置表單
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    });
+      // Reset form after 3 seconds
+      setTimeout(() => {
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+        setSubmitStatus(null);
+      }, 3000);
+    } catch (error) {
+      console.error("Email sending failed:", error);
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -72,86 +75,93 @@ ${formData.message}
           If you have any inquiries or would like to collaborate, feel free to reach out.
         </p>
 
-        <div className="contact--content">
-          {/* 聯絡表單 */}
-          <form className="contact--form" onSubmit={handleSubmit}>
-            <div className="form--group">
-              <input
-                type="text"
-                name="name"
-                placeholder="Your Name"
-                value={formData.name}
-                onChange={handleInputChange}
-                required
-              />
-            </div>
-
-            <div className="form--group">
-              <input
-                type="email"
-                name="email"
-                placeholder="Your Email"
-                value={formData.email}
-                onChange={handleInputChange}
-                required
-              />
-            </div>
-
-            <div className="form--group">
-              <input
-                type="text"
-                name="subject"
-                placeholder="Subject"
-                value={formData.subject}
-                onChange={handleInputChange}
-                required
-              />
-            </div>
-
-            <div className="form--group">
-              <textarea
-                name="message"
-                placeholder="Your Message"
-                rows="5"
-                value={formData.message}
-                onChange={handleInputChange}
-                required
-              ></textarea>
-            </div>
-
-            <button type="submit" className="contact--submit--btn">
-              <FaEnvelope /> Send Message
-            </button>
-          </form>
-
-          {/* 快速聯絡方式 */}
-          <div className="contact--quick">
-            <h3>Quick Contact</h3>
-            <button onClick={copyEmailToClipboard} className="email--copy--btn">
-              {emailCopied ? <FaCheck /> : <FaEnvelope />}
-              {emailCopied ? "Email Copied!" : "betty556611@gmail.com"}
-            </button>
-
-            <div className="social-links">
-              <a
-                href="https://github.com/ChienHuang0818"
-                target="_blank"
-                rel="noreferrer"
-                className="social-icon"
-              >
-                <FaGit size={30} />
-              </a>
-              <a
-                href="https://linkedin.com/in/chien-huang-sarah"
-                target="_blank"
-                rel="noreferrer"
-                className="social-icon"
-              >
-                <FaLinkedin size={30} />
-              </a>
-            </div>
+        <form className="contact--form" onSubmit={handleSubmit}>
+          <div className="form-instruction">
+            <p>📧 Fill out the form below and click "Send Email" to send directly to my inbox</p>
           </div>
-        </div>
+
+          <div className="form--group">
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              value={formData.name}
+              onChange={handleInputChange}
+              required
+            />
+          </div>
+
+          <div className="form--group">
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              value={formData.email}
+              onChange={handleInputChange}
+              required
+            />
+          </div>
+
+          <div className="form--group">
+            <input
+              type="text"
+              name="subject"
+              placeholder="Subject"
+              value={formData.subject}
+              onChange={handleInputChange}
+              required
+            />
+          </div>
+
+          <div className="form--group">
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              rows="5"
+              value={formData.message}
+              onChange={handleInputChange}
+              required
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            className={`contact--submit--btn ${isSubmitting ? "submitting" : ""} ${
+              submitStatus ? submitStatus : ""
+            }`}
+            disabled={isSubmitting}
+          >
+            {isSubmitting ? (
+              <>
+                <FaSpinner className="spinner" /> Processing...
+              </>
+            ) : submitStatus === "success" ? (
+              <>
+                <FaCheck /> Sent Successfully!
+              </>
+            ) : submitStatus === "error" ? (
+              <>
+                <FaEnvelope /> Try Again
+              </>
+            ) : (
+              <>
+                <FaPaperPlane /> Send Email
+              </>
+            )}
+          </button>
+
+          {/* Status Message */}
+          {submitStatus && (
+            <div className={`submit-status ${submitStatus}`}>
+              {submitStatus === "success" && (
+                <p>✅ Email sent successfully! I'll get back to you soon</p>
+              )}
+              {submitStatus === "error" && (
+                <p>❌ Sending failed, please check your internet connection or try again later</p>
+              )}
+            </div>
+          )}
+        </form>
       </div>
     </section>
   );

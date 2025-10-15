@@ -3,7 +3,7 @@ export default function AboutMe() {
     <section id="AboutMe" className="about--section">
       <div className="about--content--wrapper">
         <div className="about--text--content">
-          <h1 className="about--title">About Me</h1>
+          <h2 className="about--title">About Me</h2>
 
           {/* Intro / identity */}
           <div className="about--description">

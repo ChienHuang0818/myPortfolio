@@ -6,7 +6,7 @@ import Home from "./Pages/Home/Homescreen";
 import HeroSection from "./Pages/Home/HeroSection";
 import AboutMe from "./Pages/Home/AboutMe";
 import Work from "./Pages/Home/Work";
-import MyPortfolio from "./Pages/Home/MyPortfolio";
+import Projects from "./Pages/Home/Projects";
 import ContactMe from "./Pages/Home/ContactMe";
 import CV from "./Pages/Home/CV";
 
@@ -22,7 +22,7 @@ function App() {
             <Route path="/Narbar" element={<Navbar />}></Route>
             <Route path="/about-me" element={<AboutMe />}></Route>
             <Route path="/work" element={<Work />}></Route>
-            <Route path="/my-portfolio" element={<MyPortfolio />}></Route>
+            <Route path="/projects" element={<Projects />}></Route>
             <Route path="/contact" element={<ContactMe />}></Route>
             <Route path="/cv" element={<CV />}></Route>
             <Route path="*" element={<div>404 Not Found</div>}></Route>

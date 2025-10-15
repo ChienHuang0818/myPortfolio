@@ -22,7 +22,7 @@ function Navbar() {
 
     window.addEventListener("resize", handleResize);
 
-    handleResize(); // 初始化設置
+    handleResize();
 
     return () => {
       window.removeEventListener("resize", handleResize);
@@ -32,7 +32,7 @@ function Navbar() {
   return (
     <nav className={`navbar ${navActive ? "active" : ""}`}>
       <div className="navbar--logo">
-        <NavLink to="/hero" onClick={closeMenu}>
+        <NavLink to="/" onClick={closeMenu}>
           <img src="/img/sarah.png" alt="ChienHuang" width="80px" height="70px" />
         </NavLink>
       </div>
@@ -59,8 +59,8 @@ function Navbar() {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/my-portfolio" className="navbar--content" onClick={closeMenu}>
-              Portfolio
+            <NavLink to="/projects" className="navbar--content" onClick={closeMenu}>
+              Projects
             </NavLink>
           </li>
           <li>

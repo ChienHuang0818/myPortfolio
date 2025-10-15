@@ -1,6 +1,7 @@
 import { Link } from "react-scroll";
 import React from "react";
-import '../../App.css'; 
+import { FaHome, FaUser, FaCode, FaBriefcase, FaEnvelope } from "react-icons/fa";
+import "../../App.css";
 
 function Footer() {
   return (
@@ -16,8 +17,9 @@ function Footer() {
                 offset={-70}
                 duration={500}
                 to="heroSection"
-                className="text-md"
+                className="footer-link"
               >
+                <FaHome className="footer-icon" />
                 Home
               </Link>
             </li>
@@ -29,8 +31,9 @@ function Footer() {
                 offset={-70}
                 duration={500}
                 to="AboutMe"
-                className="text-md"
+                className="footer-link"
               >
+                <FaUser className="footer-icon" />
                 About Me
               </Link>
             </li>
@@ -41,10 +44,11 @@ function Footer() {
                 smooth={true}
                 offset={-70}
                 duration={500}
-                to="mySkills"
-                className="text-md"
+                to="work"
+                className="footer-link"
               >
-                My skills
+                <FaCode className="footer-icon" />
+                Experience
               </Link>
             </li>
             <li>
@@ -54,10 +58,11 @@ function Footer() {
                 smooth={true}
                 offset={-70}
                 duration={500}
-                to="MyPortfolio"
-                className="text-md"
+                to="projects"
+                className="footer-link"
               >
-                Portfolio
+                <FaBriefcase className="footer-icon" />
+                Projects
               </Link>
             </li>
             <li>
@@ -68,9 +73,10 @@ function Footer() {
                 offset={-70}
                 duration={500}
                 to="Contact"
-                className="text-md"
+                className="footer-link"
               >
-                Contact Me
+                <FaEnvelope className="footer-icon" />
+                Contact
               </Link>
             </li>
           </ul>
